@@ -1,0 +1,15 @@
+# The code to generate the Telegram's Instant View for our articles
+
+~version: "2.1"
+
+$main: //div[@id="primary"]
+title: $main//h1
+body://div[has-class("entry-content")]
+author: //span[has-class("vcard author")]
+cover: //figure[@class="entry-thumbnail"]
+
+@remove: //div[@id="mct-bottom-share"]
+@remove: //div[@class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"]
+@remove: //span[@class="posted-on"]
+@remove: //h3[@class="sd-title"]
+@remove: //h3[@class="wp-embedded-content"]
